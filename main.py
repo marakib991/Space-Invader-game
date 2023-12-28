@@ -87,8 +87,7 @@ def isCollision(alienX, alienY, bulletX, bulletY):
 running = True
 while running:
     
-    #screen bg color RGB
-    # screen.fill((0,255,200))
+    # Adding background color 
     screen.blit(bg, (0, 0))
     
     
@@ -119,23 +118,6 @@ while running:
                 print("key arrow is released")
                 playerX_change = 0
                 
-        # # move up or down
-        # if event.type == pygame.KEYDOWN:
-           
-        #     if event.key == pygame.K_UP:
-        #         print("up arrow is pressed")
-        #         playerY_change = -5
-        #     if event.key == pygame.K_DOWN:
-        #         print("down arrow is pressed")
-        #         playerY_change = 5
-                      
-        
-        # if event.type == pygame.KEYUP:
-        #     if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
-        #         print("key arrow is released")
-        #         playerY_change = 0
-    
-        
                 
     if bulletY <=0:
         bulletY = 480
@@ -151,13 +133,7 @@ while running:
         playerX = 740
     elif playerX <= 0:
         playerX =0
-    
-    # playerY += playerY_change 
-    # if playerY <= 0:
-    #     playerY=0
-    # if playerY >=540:
-    #     playerY =540
-    
+
     # Alien movement  
     for i in range(num_of_alien):  
         #Game over
